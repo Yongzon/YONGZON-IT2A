@@ -5,7 +5,7 @@ public class YONGZONIT2A {
        Scanner in = new Scanner (System.in);
        Record[] rc = new Record [100];
        
-       int i, no;
+       int i, no, id;
        
         System.out.println("Enter number of Application: ");
         no = in.nextInt();
@@ -16,7 +16,7 @@ public class YONGZONIT2A {
             System.out.println("Enter details of application " + (i + 1) + ": ");
             while (true) {
                 System.out.print("Enter ID: ");
-                int id = in.nextInt();
+                id = in.nextInt();
                 identi = false;
 
                 for (int x = 0; x < i; x++) {
@@ -45,12 +45,10 @@ public class YONGZONIT2A {
             rc[i] = new Record();
             rc[i].addApplications(id, nm, age, bmi, fGoals);
         }
-         System.out.printf("%-10s %-10s %-10s %-10s %-20s %-20s\n","ID", "Name", "Age", "BMI", "Fitness Goals", "Eligibility Status");
+        System.out.printf("%-10s %-10s %-10s %-10s %-20s %-20s\n","ID", "Name", "Age", "BMI", "Fitness Goals", "Eligibility Status");
             for (i = 0; i < no; i++) {
-            if(rc[i] != null){
             rc[i].viewInfo();
             System.out.println("");
-        }
         }
     }
 }

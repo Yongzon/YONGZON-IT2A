@@ -1,6 +1,7 @@
 package yongzon.it2a;
 public class Record {
-    int id, age;
+    int id;
+    int age;
     String name;
     float bmi;
     String fGoals;
@@ -15,6 +16,8 @@ public class Record {
     
     public void viewInfo(){
        String EligibilityS = (this.age >= 18 && this.age <= 65) ? "Eligible" : "Not Eligible (Age too High)";  
-       System.out.printf("%-10d %-10s %-10d %-10d %-13s\n",this.id,this.name,this.age,this.bmi,this.fGoals, EligibilityS);
+       String Goals = (this.fGoals > 18 && this.fGoals < 30) ? "Weight loss" : "Muscle Gain";
+       
+       System.out.printf("%-10d %-10s %-10d %-10d %-13s\n",this.id,this.name,this.age,this.bmi,Goals, EligibilityS);
     }
 }
